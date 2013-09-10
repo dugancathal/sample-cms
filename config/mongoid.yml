@@ -1,0 +1,19 @@
+development:
+  sessions:
+    default:
+      database: tendrilcms
+      hosts:
+        - localhost:27017
+test:
+  sessions:
+    default:
+      database: tendrilcms_test
+      hosts:
+        - localhost:27017
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ<em>URL'] %>
+      options:
+        skip_version_check: true
+        safe: true
